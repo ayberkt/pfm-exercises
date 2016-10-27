@@ -1,0 +1,42 @@
+\documentclass{article}
+\input{/Users/ayberkt/Developer/latex-basis/basis.tex}
+
+\usepackage{boxproof}
+\usepackage{mathpazo}
+
+\author{Ayberk Tosun}
+\title{
+  Practical Foundations of Mathematics\\
+  Exercise Solutions
+}
+
+\begin{document}
+\maketitle
+
+\section*{Chapter 1}
+
+\subsection*{Exercise 22}
+
+\begin{proposition}
+  \( (\alpha \land \beta) \Rightarrow \gamma
+     \dashv \vdash \alpha \Rightarrow (\beta \Rightarrow \gamma) \).
+\end{proposition}
+
+\begin{proof}
+\begin{proofbox}
+   \lbl{1}\: (\alpha \land \beta) \Rightarrow \gamma \\
+   \[
+      \lbl{2}\: \alpha\= \mathsf{hyp} \\
+      \[
+        \: \beta \= \mathsf{hyp} \\
+        \: \alpha \= (\ref{2}) \\
+        \: \alpha \land \beta \= \land\mathcal{I}\\
+        \: \gamma \= \elim\Rightarrow
+      \]
+      \: \beta \Rightarrow \gamma \= \intro\Rightarrow
+   \]
+   \: \alpha \Rightarrow (\beta \Rightarrow \gamma) \= \intro\Rightarrow
+\end{proofbox}
+\end{proof}
+
+\end{document}
